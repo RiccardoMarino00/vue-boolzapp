@@ -45,7 +45,7 @@
             </div>
             
             <div class="contatti-col col">
-                <div class="avatar" v-for="(contact, i) in contacts">
+                <div class="avatar" v-for="(contact, i) in contacts" @click="currentIndex = i">
                     <div class="avatar-img">
                         <img :src="contact.avatar" alt="avatar" class="img-profile">
                     </div>
@@ -55,83 +55,6 @@
                         <span class="orario">16:10</span>
                     </div>
                 </div>
-
-                <!-- <div class="avatar">
-                    <div class="avatar-img">
-                        <img src="./img/avatar_2.jpg" alt="avatar" class="img-profile">
-                    </div>
-                    <div class="avatar-p">
-                        <p class="nome-contatto"><strong>Fabio</strong></p> <br>
-                        <p class="contatti-sp">Lorem ipsum dolor sit amet.</p>
-                        <span class="orario">16:12</span>
-                    </div>
-                </div>
-
-                <div class="avatar">
-                    <div class="avatar-img">
-                        <img src="./img/avatar_3.jpg" alt="avatar" class="img-profile">
-                    </div>
-                    <div class="avatar-p">
-                        <p class="nome-contatto"><strong>Samuele</strong></p> <br>
-                        <p class="contatti-sp">Lorem ipsum dolor sit amet.</p>
-                        <span class="orario">20:20</span>
-                    </div>
-                </div>
-
-                <div class="avatar">
-                    <div class="avatar-img">
-                        <img src="./img/avatar_4.jpg" alt="avatar" class="img-profile">
-                    </div>
-                    <div class="avatar-p">
-                        <p class="nome-contatto"><strong>Alessandro N.</strong></p> <br>
-                        <p class="contatti-sp">Lorem ipsum dolor sit amet.</p>
-                        <span class="orario">14:17</span>
-                    </div>
-                </div>
-
-                <div class="avatar">
-                    <div class="avatar-img">
-                        <img src="./img/avatar_5.jpg" alt="avatar" class="img-profile">
-                    </div>
-                    <div class="avatar-p">
-                        <p class="nome-contatto"><strong>Federico</strong></p> <br>
-                        <p class="contatti-sp">Lorem ipsum dolor sit amet.</p>
-                        <span class="orario">10:00</span>
-                    </div>
-                </div>
-
-                <div class="avatar">
-                    <div class="avatar-img">
-                        <img src="./img/avatar_6.jpg" alt="avatar" class="img-profile">
-                    </div>
-                    <div class="avatar-p">
-                        <p class="nome-contatto"><strong>Claudia</strong></p> <br>
-                        <p class="contatti-sp">Lorem ipsum dolor sit amet.</p>
-                        <span class="orario">12:55</span>
-                    </div>
-                </div>
-
-                <div class="avatar">
-                    <div class="avatar-img">
-                        <img src="./img/avatar_7.jpg" alt="avatar" class="img-profile">
-                    </div>
-                    <div class="avatar-p">
-                        <p class="nome-contatto"><strong>Davide</strong></p> <br>
-                        <p class="contatti-sp">Lorem ipsum dolor sit amet.</p>
-                        <span class="orario">6:54</span>
-                    </div>
-                </div>
-
-                <div class="avatar">
-                    <div class="avatar-img">
-                        <img src="./img/avatar_8.jpg" alt="avatar" class="img-profile">
-                    </div>
-                    <div class="avatar-p">
-                        <p class="nome-contatto"><strong>Alessandro B.</strong></p> <br>
-                        <p class="contatti-sp">Lorem ipsum dolor sit amet.</p>
-                        <span class="orario">00:32</span>
-                    </div>
-                </div> -->
                 
             </div>
           </div>
@@ -139,12 +62,12 @@
            <div class="chat">
             <div class="header-col">
 
-                <div class="avatar-io">
-                    <div class="avatar-img">
-                        <img src="./img/avatar_1.jpg" alt="avatar" class="img-profile">
+                <div class="avatar-io" >
+                    <div class="avatar-img" >
+                        <img :src="contacts[currentIndex].avatar" alt="avatar" class="img-profile">
                     </div>
                     <div class="avatar-p">
-                        <p class="nome-contatto"><strong>Michele</strong></p> <br>
+                        <p class="nome-contatto"><strong>{{ contacts[currentIndex].name }}</strong></p> <br>
                         <p class="contatti-sp">Ultimo accesso oggi alle 16:17</p>
                     </div>
                 </div>
