@@ -176,12 +176,24 @@ createApp({
 methods: {
   addNewMessage(index){
     currentContact = this.contacts[index]
-    const newMessages = {
+    const newMessagesSent = {
       date: '10/01/2020 15:51:00',
       message: this.inputMessage,
       status: 'sent'
     }
-    this.contacts[this.currentIndex].messages.push(newMessages)
+    
+    const newMessagesReceived = {
+      date: '10/01/2020 15:51:00',
+      message: "ok",
+      status: 'received'
+    }
+
+    const msgContacts = this.contacts[this.currentIndex]
+    
+
+    msgContacts.messages.push(newMessagesSent)
+    this.inputMessage = ""
+    msgContacts.messages.push(newMessagesReceived)
     this.inputMessage = ""
 
   }

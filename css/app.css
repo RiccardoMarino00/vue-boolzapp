@@ -242,6 +242,10 @@ body{
 
 .msg-input{
     flex-grow: 1;
+    padding: 8px;
+    border: none;
+    font-size: 15px;
+    border-radius: 999px;
     /* width: 100%; */
 }
 
@@ -274,7 +278,7 @@ body{
 }
 
 .text-input{
-    flex-grow: 1;
+    display: flex;
     width: 100%;
 }
 
