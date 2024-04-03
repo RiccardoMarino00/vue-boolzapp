@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/cf3b3313c9.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/app.css">
+    <title>Boolzap</title>
+</head>
+
+<body class="debug" id="app">
+    <div class="container">
+        <div class="row">
+           <div class="sidebar col">
+            <div class="io-col col">
+                <div class="img-io">
+                    <img src="./img/avatar_io.jpg" alt="immagine" class="img-profile">
+                </div>
+                <ul class="icon-ul">
+                    <li><a href="#"><i class="fa-solid fa-circle-notch icon-lightgray"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-message icon-lightgray"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-ellipsis-vertical icon-lightgray"></i></a></li>
+                </ul>
+            </div>
+            <div class="notifiche-col col">
+                <div class="icona-notifiche">
+                    <i class="fa-solid fa-bell-slash icon-bell"></i>
+                </div>
+                <div class="testo">
+                    <p class="text-notifiche"><strong>Ricevi notifiche di nuovi messaggi</strong></p>
+                    <p class="text-notifiche-lightgray"><a href="#">Attiva notifiche desktop</a></p>
+                </div>
+            </div>
+            <div class="ricerca">
+                <div class="icona-lente">
+                    <span><i class="fa-solid fa-magnifying-glass icona-lente"></i></span>
+                </div>
+                
+                <div class="cerca-col col">
+                    <input type="search" placeholder="Cerca o inzia una nuova chat" class="input-search"> 
+                </div>
+            </div>
+            
+            <div class="contatti-col col">
+                <div class="avatar" v-for="(contact, i) in contacts">
+                    <div class="avatar-img">
+                        <img :src="contact.avatar" alt="avatar" class="img-profile">
+                    </div>
+                    <div class="avatar-p">
+                        <p class="nome-contatto"><strong>{{contact.name}}</strong></p> <br>
+                        <p class="contatti-sp">Lorem ipsum dolor sit amet.</p>
+                        <span class="orario">16:10</span>
+                    </div>
+                </div>
+
+                <!-- <div class="avatar">
+                    <div class="avatar-img">
+                        <img src="./img/avatar_2.jpg" alt="avatar" class="img-profile">
+                    </div>
+                    <div class="avatar-p">
+                        <p class="nome-contatto"><strong>Fabio</strong></p> <br>
+                        <p class="contatti-sp">Lorem ipsum dolor sit amet.</p>
+                        <span class="orario">16:12</span>
+                    </div>
+                </div>
+
+                <div class="avatar">
+                    <div class="avatar-img">
+                        <img src="./img/avatar_3.jpg" alt="avatar" class="img-profile">
+                    </div>
+                    <div class="avatar-p">
+                        <p class="nome-contatto"><strong>Samuele</strong></p> <br>
+                        <p class="contatti-sp">Lorem ipsum dolor sit amet.</p>
+                        <span class="orario">20:20</span>
+                    </div>
+                </div>
+
+                <div class="avatar">
+                    <div class="avatar-img">
+                        <img src="./img/avatar_4.jpg" alt="avatar" class="img-profile">
+                    </div>
+                    <div class="avatar-p">
+                        <p class="nome-contatto"><strong>Alessandro N.</strong></p> <br>
+                        <p class="contatti-sp">Lorem ipsum dolor sit amet.</p>
+                        <span class="orario">14:17</span>
+                    </div>
+                </div>
+
+                <div class="avatar">
+                    <div class="avatar-img">
+                        <img src="./img/avatar_5.jpg" alt="avatar" class="img-profile">
+                    </div>
+                    <div class="avatar-p">
+                        <p class="nome-contatto"><strong>Federico</strong></p> <br>
+                        <p class="contatti-sp">Lorem ipsum dolor sit amet.</p>
+                        <span class="orario">10:00</span>
+                    </div>
+                </div>
+
+                <div class="avatar">
+                    <div class="avatar-img">
+                        <img src="./img/avatar_6.jpg" alt="avatar" class="img-profile">
+                    </div>
+                    <div class="avatar-p">
+                        <p class="nome-contatto"><strong>Claudia</strong></p> <br>
+                        <p class="contatti-sp">Lorem ipsum dolor sit amet.</p>
+                        <span class="orario">12:55</span>
+                    </div>
+                </div>
+
+                <div class="avatar">
+                    <div class="avatar-img">
+                        <img src="./img/avatar_7.jpg" alt="avatar" class="img-profile">
+                    </div>
+                    <div class="avatar-p">
+                        <p class="nome-contatto"><strong>Davide</strong></p> <br>
+                        <p class="contatti-sp">Lorem ipsum dolor sit amet.</p>
+                        <span class="orario">6:54</span>
+                    </div>
+                </div>
+
+                <div class="avatar">
+                    <div class="avatar-img">
+                        <img src="./img/avatar_8.jpg" alt="avatar" class="img-profile">
+                    </div>
+                    <div class="avatar-p">
+                        <p class="nome-contatto"><strong>Alessandro B.</strong></p> <br>
+                        <p class="contatti-sp">Lorem ipsum dolor sit amet.</p>
+                        <span class="orario">00:32</span>
+                    </div>
+                </div> -->
+                
+            </div>
+          </div>
+
+           <div class="chat">
+            <div class="header-col">
+
+                <div class="avatar-io">
+                    <div class="avatar-img">
+                        <img src="./img/avatar_1.jpg" alt="avatar" class="img-profile">
+                    </div>
+                    <div class="avatar-p">
+                        <p class="nome-contatto"><strong>Michele</strong></p> <br>
+                        <p class="contatti-sp">Ultimo accesso oggi alle 16:17</p>
+                    </div>
+                </div>
+
+
+                <ul class="icon-ul">
+                    <li><a href="#"><i class="fa-solid fa-magnifying-glass icon-lightgray"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-paperclip icon-lightgray"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-ellipsis-vertical icon-lightgray"></i></a></li>
+                </ul>
+
+            </div>
+            <div class="main col">
+                <div class="msg-sent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti rem expedita nihil autem provident iusto dolore excepturi odio saepe, debitis eaque tenetur dignissimos quas aliquid quod adipisci consequuntur numquam perferendis.</div>
+                <div class="msg-recived">Lorem, ipsum dolor sit amet consectetur adipisicing elit. At nisi ut unde fugit iste cupiditate modi sit et eum facere, alias eaque assumenda fuga optio ipsam autem maxime earum a.</div>
+            </div>
+            <div class="footer-col">
+                <div class="emoji"><a href="#"><i class="fa-regular fa-face-tired icon-gray"></i></a></div>
+                <div class="text-input">
+                    <input type="text" placeholder="Scrivi un messaggio" class="msg-input">
+                </div>
+                <div class="audio"><a href="#"><i class="fa-solid fa-microphone icon-gray"></i></a></div>
+            </div>
+           </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>
