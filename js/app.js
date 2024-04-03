@@ -6,6 +6,7 @@ createApp({
     return {
       messages: "",
       currentIndex: 0,
+      inputMessage: "",
       contacts: [
         {
           name: "Michele",
@@ -170,6 +171,19 @@ createApp({
       }
     ]
         
+  }
+},
+methods: {
+  addNewMessage(index){
+    currentContact = this.contacts[index]
+    const newMessages = {
+      date: '10/01/2020 15:51:00',
+      message: this.inputMessage,
+      status: 'sent'
+    }
+    this.contacts[this.currentIndex].messages.push(newMessages)
+    this.inputMessage = ""
+
   }
 }  
 }).mount('#app')
