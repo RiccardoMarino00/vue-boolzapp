@@ -50,6 +50,8 @@ body{
     height: 100%;
 }
 
+
+
 .io-col{
     display: flex;
     justify-content: space-between;
@@ -71,6 +73,10 @@ body{
     display: none;
 }
 
+.avatar:hover {
+    background-color: rgba(199, 188, 188, 0.603);
+}
+
 .avatar{
     display: flex;
     align-items: center;
@@ -78,6 +84,11 @@ body{
     border-bottom: 1px solid rgba(204, 199, 199, 0.622);
     border-right: 1px solid rgba(204, 199, 199, 0.622);
     cursor: pointer;
+
+}
+
+.scroll{
+    overflow-y: scroll;
 }
 
 .avatar-io{
@@ -172,7 +183,6 @@ body{
 }
 
 .contatti-col{
-    overflow-y: scroll;
     /* overflow-x: hidden; */
     flex-grow: 1;
     user-select: none;
@@ -252,6 +262,7 @@ body{
 .main{
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .msg-sent, .msg-recived{
@@ -265,21 +276,29 @@ body{
     margin-top: 20px;
     margin-right: 120px;
     padding: 15px;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .msg-recived{
     align-self: self-start;
-    background-color: #aaba9e;
+    background-color: #f1ecec;
     margin-top: 20px;
     margin-left: 120px;
     padding: 15px;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .text-input{
     display: flex;
     width: 100%;
+}
+
+.sent-time{
+    font-size: 10px;
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+    color: #8d8989;
 }
 
 

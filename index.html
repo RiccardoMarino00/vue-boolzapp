@@ -40,23 +40,25 @@
                 </div>
                 
                 <div class="cerca-col col">
-                    <input type="search" placeholder="Cerca o inzia una nuova chat" class="input-search"> 
+                    <input type="search" placeholder="Cerca o inzia una nuova chat" class="input-search" v-model="inputSearch" @keyup.enter="ricercaContatto(inputSearch)"> 
+                </div>
+            </div>
+            <div class="scroll">
+                <div class="contatti-col col" v-for="(contact, i) in contacts">
+                    <div v-if="this.contacts[i].name.includes(inputSearch)" class="avatar"  @click="currentIndex = i" >                   
+                            <div class="avatar-img">
+                                <img :src="contact.avatar" alt="avatar" class="img-profile">
+                            </div>
+                            <div class="avatar-p">
+                                <p class="nome-contatto"><strong>{{contact.name}}</strong></p> <br>
+                                <p class="contatti-sp">Lorem ipsum dolor sit amet.</p>
+                                <span class="orario">16:10</span>
+                            </div>                                                   
+                    </div>
+                    
                 </div>
             </div>
             
-            <div class="contatti-col col">
-                <div class="avatar" v-for="(contact, i) in contacts" @click="currentIndex = i">
-                    <div class="avatar-img">
-                        <img :src="contact.avatar" alt="avatar" class="img-profile">
-                    </div>
-                    <div class="avatar-p">
-                        <p class="nome-contatto"><strong>{{contact.name}}</strong></p> <br>
-                        <p class="contatti-sp">Lorem ipsum dolor sit amet.</p>
-                        <span class="orario">16:10</span>
-                    </div>
-                </div>
-                
-            </div>
           </div>
 
            <div class="chat">
@@ -82,8 +84,10 @@
 
             </div>
             <div class="main col" v-for="(el, i) in contacts[currentIndex].messages" :class="el.status === 'sent' ? 'msg-sent' : 'msg-recived'">
-                <div>{{el.message}}</div>
-                <!-- <div class="msg-recived"></div> -->
+                <div>{{el.message}}
+                    <span class="sent-time">{{el.date.slice(11,16)}}</span>
+                </div>
+                
             </div>
             <div class="footer-col">
                 <div class="emoji"><a href="#"><i class="fa-regular fa-face-tired icon-gray"></i></a></div>

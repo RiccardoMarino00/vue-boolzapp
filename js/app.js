@@ -7,6 +7,7 @@ createApp({
       messages: "",
       currentIndex: 0,
       inputMessage: "",
+      inputSearch: "",
       contacts: [
         {
           name: "Michele",
@@ -195,6 +196,18 @@ methods: {
     this.inputMessage = ""
     msgContacts.messages.push(newMessagesReceived)
     this.inputMessage = ""
+
+  },
+
+  ricercaContatto(input){
+   for ( let i = 0; i < this.contacts.length; i++){
+       if (this.contacts[i].name.includes(input)){
+       console.log(this.contacts[i].name)
+    }
+
+   }
+      
+    
 
   }
 }  
