@@ -204,11 +204,9 @@ methods: {
        if (this.contacts[i].name.includes(input)){
        console.log(this.contacts[i].name)
     }
-
    }
-      
-    
+  },
 
-  }
+  
 }  
 }).mount('#app')

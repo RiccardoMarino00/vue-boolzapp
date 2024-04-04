@@ -23,11 +23,11 @@ a{
 
                                /* LAYOUT */
 
-.container{
+.contenitore{
     height: 100vh;
 }
 
-.row{
+.riga{
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
@@ -87,9 +87,7 @@ body{
 
 }
 
-.scroll{
-    overflow-y: scroll;
-}
+
 
 .avatar-io{
     display: flex;
@@ -131,8 +129,8 @@ body{
 }
 
 .text-notifiche{
-    font-size: 15px;
-    
+    font-size: 13px;
+    width: 200px;
 }
 
 .text-notifiche-lightgray{
@@ -183,7 +181,6 @@ body{
 }
 
 .contatti-col{
-    /* overflow-x: hidden; */
     flex-grow: 1;
     user-select: none;
 }
@@ -227,10 +224,6 @@ body{
 }
 
 
-.main.col{
-    /* flex-grow: 1; */
-    /* margin: 4px; */
-}
 
 .footer-col{
     display: flex;
@@ -256,7 +249,6 @@ body{
     border: none;
     font-size: 15px;
     border-radius: 999px;
-    /* width: 100%; */
 }
 
 .main{
@@ -265,10 +257,20 @@ body{
     position: relative;
 }
 
-.msg-sent, .msg-recived{
-    /* max-width: 400px; */
-    /* width: 100; */
+.fa-chevron-down{
+    font-size: 12px;
+    color: #8d8989 ;
+
 }
+
+.dropdown-center{
+    display: inline-block;
+}
+
+.btn{
+    border-width: 0px;
+}
+
 
 .msg-sent{
     align-self: self-end;
@@ -277,6 +279,7 @@ body{
     margin-right: 120px;
     padding: 15px;
     border-radius: 10px;
+    max-width: 500px;
 }
 
 .msg-recived{
@@ -285,6 +288,7 @@ body{
     margin-top: 20px;
     margin-left: 120px;
     padding: 15px;
+    max-width: 500px;
     border-radius: 10px;
 }
 
@@ -328,18 +332,16 @@ body{
 
     }
 
-    /* .msg-input{
-        display: inline-block;
-        width: 100px;
-        padding: 8px;
-        margin: 5px;
-    } */
+    .scroll{
+        overflow-y: hidden;
+    }
+
+
 }
 
 @media (min-width: 758px){
     .sidebar{
         display: flex;
-        /* width: 80px; */
         background-color: white;
         flex-direction: column;
     }
@@ -373,13 +375,6 @@ body{
         display: inline-block;
     }
 
-    /* .msg-input{
-        display: inline-block;
-        width: 300px;
-        padding: 8px;
-        margin: 5px;
-    } */
-
    
     
 }
@@ -387,7 +382,7 @@ body{
 @media (min-width: 982px){
 
 
-    .container{
+    .contenitore{
         padding: 20px;
     }
 
@@ -409,7 +404,6 @@ body{
 
     .notifiche-col{
         display: flex;
-        /* justify-content: flex-start; */
    }
 
    .nome-contatto{
@@ -436,12 +430,10 @@ body{
     display: inline-block;
   }
 
-  /* .msg-input{
-    display: inline-block;
-    width: 400px;
-    padding: 8px;
-    margin: 5px;
-  } */
+  .scroll{
+    overflow-y: scroll;
+}
+
 }
 
 
