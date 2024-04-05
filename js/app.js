@@ -183,19 +183,24 @@ methods: {
       status: 'sent'
     }
     
-    const newMessagesReceived = {
-      date: '10/01/2020 15:51:00',
-      message: "ok",
-      status: 'received'
-    }
+    
 
     const msgContacts = this.contacts[this.currentIndex]
     
 
     msgContacts.messages.push(newMessagesSent)
     this.inputMessage = ""
-    msgContacts.messages.push(newMessagesReceived)
-    this.inputMessage = ""
+    
+
+    setTimeout (() => {
+      const newMessagesReceived = {
+        date: '10/01/2020 15:51:00',
+        message: "ok",
+        status: 'received'
+      }
+      msgContacts.messages.push(newMessagesReceived)
+      this.inputMessage = ""
+    }, 1000)
 
   },
 
