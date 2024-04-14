@@ -37,7 +37,7 @@
             </div>
             <div class="ricerca">
                 <div class="icona-lente">
-                    <span><i class="fa-solid fa-magnifying-glass icona-lente"></i></span>
+                    <span class="span-lente"><i class="fa-solid fa-magnifying-glass icona-lente"></i></span>
                 </div>
                 
                 <div class="cerca-col colonna">
@@ -51,9 +51,11 @@
                                 <img :src="contact.avatar" alt="avatar" class="img-profile">
                             </div>
                             <div class="avatar-p">
-                                <p class="nome-contatto"><strong>{{contact.name}}</strong></p> <br>
+                                <p class="nome-contatto"><strong>{{contact.name}}</strong></p>
                                 <p class="contatti-sp">Lorem ipsum dolor sit amet.</p>
-                                <span class="orario">16:10</span>
+                                <div class="list-time" v-for="(el, i) in contacts[currentIndex].messages">
+                                    <span class="orario">{{el.date.slice(11,16)}}</span>
+                                </div>
                             </div>                                                   
                     </div>
                     
@@ -70,7 +72,7 @@
                         <img :src="contacts[currentIndex].avatar" alt="avatar" class="img-profile">
                     </div>
                     <div class="avatar-p">
-                        <p class="nome-contatto"><strong>{{ contacts[currentIndex].name }}</strong></p> <br>
+                        <p class="nome-contatto"><strong>{{ contacts[currentIndex].name }}</strong></p> 
                         <p class="contatti-sp">Ultimo accesso oggi alle 16:17</p>
                     </div>
                 </div>

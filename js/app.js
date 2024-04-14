@@ -110,7 +110,7 @@ createApp({
         ],
       },
       {
-        name: 'Claudia',
+        name: 'Donatella',
         avatar: './img/avatar_6.jpg',
         visible: true,
         messages: [
@@ -195,7 +195,7 @@ methods: {
     setTimeout (() => {
       const newMessagesReceived = {
         date: '10/01/2020 15:51:00',
-        message: "ok",
+        message: "Ok",
         status: 'received'
       }
       msgContacts.messages.push(newMessagesReceived)
@@ -211,6 +211,7 @@ methods: {
     }
    }
   },
+
 
   
 }  
